@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I Wayan Divrayadnya M.Kom | DevOps & IT Support</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
+<title>I Wayan Divrayadnya M.Kom | DevOps Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
 scroll-behavior:smooth;
 }
 
+:root{
+--primary:#2997ff;
+--dark:#000;
+--card:rgba(255,255,255,.05);
+--border:rgba(255,255,255,.08);
+--text:#d1d5db;
+}
+
 body{
+font-family:'Inter',sans-serif;
 background:#000;
-color:#fff;
+color:white;
 overflow-x:hidden;
 }
 
@@ -29,13 +42,21 @@ content:'';
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at top, rgba(0,113,227,0.25), transparent 35%),
-radial-gradient(circle at bottom, rgba(255,255,255,0.05), transparent 30%);
-z-index:-1;
+radial-gradient(circle at top left, rgba(41,151,255,.18), transparent 30%),
+radial-gradient(circle at bottom right, rgba(255,255,255,.06), transparent 30%);
+z-index:-2;
 }
 
-.container{
-width:100%;
+body::after{
+content:'';
+position:fixed;
+inset:0;
+background-image:
+linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+background-size:50px 50px;
+z-index:-1;
+mask-image:linear-gradient(to bottom, rgba(0,0,0,.7), transparent);
 }
 
 .navbar{
@@ -43,25 +64,25 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:20px 7%;
+padding:22px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(20px);
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(25px);
+border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
-border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
 font-family:'Plus Jakarta Sans',sans-serif;
-font-size:22px;
-font-weight:700;
+font-size:24px;
+font-weight:800;
 letter-spacing:1px;
 }
 
 .logo span{
-color:#2997ff;
+color:var(--primary);
 }
 
 .nav-links{
@@ -70,59 +91,72 @@ gap:35px;
 }
 
 .nav-links a{
+color:#cbd5e1;
 text-decoration:none;
-color:#d1d1d1;
 font-size:14px;
+font-weight:500;
 transition:.3s;
 }
 
 .nav-links a:hover{
-color:#fff;
+color:white;
 }
 
 .hero{
 min-height:100vh;
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-padding:120px 20px 60px;
+padding:150px 20px 100px;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle, rgba(41,151,255,.15), transparent 70%);
+top:-250px;
+z-index:-1;
 }
 
 .tag{
-padding:10px 22px;
+padding:12px 24px;
 border-radius:100px;
-background:rgba(255,255,255,0.06);
-border:1px solid rgba(255,255,255,0.08);
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
 font-size:13px;
-margin-bottom:30px;
-color:#2997ff;
+margin-bottom:35px;
+color:var(--primary);
 backdrop-filter:blur(20px);
 }
 
 .hero h1{
 font-family:'Plus Jakarta Sans',sans-serif;
-font-size:90px;
-font-weight:800;
-line-height:1;
+font-size:110px;
+font-weight:900;
+line-height:.95;
+letter-spacing:-5px;
+margin-bottom:30px;
 max-width:1200px;
-margin-bottom:25px;
-letter-spacing:-3px;
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#fff,#2997ff);
+background:linear-gradient(90deg,#fff,var(--primary));
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-max-width:900px;
-font-size:22px;
+max-width:850px;
+font-size:24px;
 line-height:1.8;
-color:#b5b5b5;
-margin-bottom:40px;
+color:#9ca3af;
+margin-bottom:45px;
 }
 
 .hero-buttons{
@@ -133,7 +167,7 @@ justify-content:center;
 }
 
 .btn{
-padding:16px 34px;
+padding:16px 36px;
 border-radius:100px;
 text-decoration:none;
 font-weight:600;
@@ -142,33 +176,43 @@ transition:.4s;
 }
 
 .btn-primary{
-background:#2997ff;
+background:var(--primary);
 color:white;
 box-shadow:0 10px 40px rgba(41,151,255,.35);
 }
 
 .btn-primary:hover{
-transform:scale(1.05);
+transform:translateY(-3px);
 }
 
 .btn-secondary{
-border:1px solid rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,.1);
+background:rgba(255,255,255,.03);
 color:white;
-background:rgba(255,255,255,0.03);
 }
 
 .btn-secondary:hover{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,.08);
 }
 
 .hero-image{
 margin-top:70px;
-width:320px;
-height:320px;
+width:330px;
+height:330px;
 border-radius:50%;
 padding:6px;
-background:linear-gradient(135deg,#2997ff,#ffffff);
-box-shadow:0 0 80px rgba(41,151,255,.4);
+background:linear-gradient(135deg,var(--primary),white);
+box-shadow:0 0 120px rgba(41,151,255,.4);
+position:relative;
+}
+
+.hero-image::before{
+content:'';
+position:absolute;
+inset:-15px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.08);
+animation:spin 12s linear infinite;
 }
 
 .hero-image img{
@@ -178,8 +222,29 @@ object-fit:cover;
 border-radius:50%;
 }
 
+@keyframes spin{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
 .section{
-padding:120px 8%;
+padding:130px 8%;
+position:relative;
+}
+
+.section::before{
+content:'';
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+width:300px;
+height:1px;
+background:linear-gradient(to right, transparent, var(--primary), transparent);
 }
 
 .section-dark{
@@ -188,25 +253,25 @@ background:#050505;
 
 .section-title{
 font-family:'Plus Jakarta Sans',sans-serif;
-font-size:72px;
+font-size:78px;
+font-weight:900;
+letter-spacing:-3px;
 text-align:center;
-font-weight:800;
-margin-bottom:20px;
-letter-spacing:-2px;
+margin-bottom:25px;
 }
 
 .section-title span{
-color:#2997ff;
+color:var(--primary);
 }
 
 .section-subtitle{
-text-align:center;
 max-width:900px;
 margin:auto;
-color:#a1a1aa;
-font-size:20px;
+text-align:center;
+font-size:22px;
 line-height:1.8;
-margin-bottom:80px;
+color:#9ca3af;
+margin-bottom:90px;
 }
 
 .grid{
@@ -216,23 +281,46 @@ gap:30px;
 }
 
 .card{
-background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));
-border:1px solid rgba(255,255,255,0.08);
-padding:40px;
+background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+border:1px solid var(--border);
+padding:45px;
 border-radius:35px;
-transition:.4s;
-backdrop-filter:blur(20px);
+backdrop-filter:blur(25px);
+position:relative;
+overflow:hidden;
+transition:.5s;
+}
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.06),
+transparent
+);
+transition:.8s;
+}
+
+.card:hover::before{
+left:100%;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 60px rgba(41,151,255,.15);
+transform:translateY(-15px);
+border-color:rgba(41,151,255,.3);
+box-shadow:0 20px 80px rgba(41,151,255,.15);
 }
 
 .card i{
-font-size:45px;
+font-size:48px;
 margin-bottom:25px;
-color:#2997ff;
+color:var(--primary);
 }
 
 .card h3{
@@ -242,178 +330,260 @@ margin-bottom:20px;
 }
 
 .card p{
-color:#c7c7c7;
-line-height:1.9;
 font-size:15px;
+line-height:1.9;
+color:#cbd5e1;
 }
 
 .timeline{
 max-width:1100px;
 margin:auto;
+position:relative;
 display:flex;
 flex-direction:column;
 gap:30px;
 }
 
+.timeline::before{
+content:'';
+position:absolute;
+left:20px;
+top:0;
+width:2px;
+height:100%;
+background:linear-gradient(to bottom,var(--primary),transparent);
+}
+
 .timeline-item{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-padding:40px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+padding:45px;
+padding-left:80px;
 border-radius:35px;
-backdrop-filter:blur(20px);
-transition:.4s;
+position:relative;
+transition:.5s;
+backdrop-filter:blur(25px);
+}
+
+.timeline-item::before{
+content:'';
+position:absolute;
+left:11px;
+top:50px;
+width:20px;
+height:20px;
+border-radius:50%;
+background:var(--primary);
+box-shadow:0 0 30px rgba(41,151,255,.8);
 }
 
 .timeline-item:hover{
-transform:scale(1.02);
+transform:translateX(10px);
 }
 
 .timeline-item h3{
 font-family:'Plus Jakarta Sans',sans-serif;
-font-size:34px;
+font-size:36px;
 margin-bottom:10px;
 }
 
 .timeline-item h5{
+color:var(--primary);
 font-size:18px;
-color:#2997ff;
 margin-bottom:20px;
 }
 
 .timeline-item p{
-color:#c7c7c7;
 line-height:1.9;
+color:#cbd5e1;
 }
 
 .footer{
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
-border-top:1px solid rgba(255,255,255,0.08);
-background:#020202;
+background:#000;
+border-top:1px solid rgba(255,255,255,.08);
+position:relative;
+overflow:hidden;
+}
+
+.footer::before{
+content:'';
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle, rgba(41,151,255,.12), transparent 70%);
+top:-300px;
+left:50%;
+transform:translateX(-50%);
 }
 
 .footer h3{
 font-family:'Plus Jakarta Sans',sans-serif;
-font-size:32px;
-margin-bottom:10px;
+font-size:42px;
+margin-bottom:15px;
 }
 
 .footer p{
-color:#8e8e93;
+font-size:16px;
 line-height:1.8;
+color:#9ca3af;
 }
 
 @media(max-width:991px){
-.hero h1{
-font-size:55px;
-}
-
-.section-title{
-font-size:48px;
-}
-
-.hero p,
-.section-subtitle{
-font-size:17px;
-}
 
 .nav-links{
 display:none;
 }
+
+.hero h1{
+font-size:60px;
+letter-spacing:-2px;
 }
 
-@media(max-width:600px){
-.hero h1{
-font-size:42px;
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:50px;
+}
+
+.section-subtitle{
+font-size:18px;
 }
 
 .hero-image{
-width:230px;
-height:230px;
+width:240px;
+height:240px;
+}
+
+.timeline-item{
+padding:35px;
+padding-left:70px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:45px;
+}
+
+.section-title{
+font-size:40px;
 }
 
 .card{
 padding:30px;
 }
+
 }
+
 </style>
 </head>
+
 <body>
 
 <div class="navbar">
-<div class="logo">DIVRA<span>YADNYA</span></div>
+<div class="logo">
+DIVRA<span>YADNYA</span>
+</div>
 
 <div class="nav-links">
-<a href="#about">About</a>
-<a href="#expertise">Expertise</a>
+<a href="#about">Profile</a>
+<a href="#profile">Overview</a>
 <a href="#experience">Experience</a>
-<a href="#education">Education</a>
 <a href="#projects">Projects</a>
+<a href="#education">Education</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 
-<div class="container">
-
 <section class="hero" id="about">
+
+<div class="tag">
+ Premium Portfolio Experience
+</div>
+
 <h1>
 I Wayan <span>Divrayadnya M.Kom</span>
 </h1>
 
 <p>
-DevOps Engineer, IT Officer, and Full Stack Developer focused on building premium hospitality systems, scalable infrastructures, elegant interfaces, and modern digital experiences.
+DevOps Engineer, IT Officer, and Full Stack Developer focused on creating premium hospitality systems, intelligent automation, scalable infrastructures, and elegant digital experiences inspired by modern technology ecosystems.
 </p>
 
 <div class="hero-buttons">
-<a href="mailto:divrayadnyaa@mail.com" class="btn btn-primary">Contact Me</a>
-<a href="https://divrayadnya.github.io/divrayadnya/" target="_blank" class="btn btn-secondary">View Portfolio</a>
+
+<a href="mailto:divrayadnyaa@mail.com" class="btn btn-primary">
+Contact Me
+</a>
+
+<a href="https://divrayadnya.github.io/divrayadnya/" target="_blank" class="btn btn-secondary">
+View Portfolio
+</a>
+
 </div>
 
 <div class="hero-image">
 <img src="foto.jpg" alt="I Wayan Divrayadnya">
 </div>
+
 </section>
 
-<section class="section section-dark" id="expertise">
-<h2 class="section-title">Built for <span>Modern Systems</span></h2>
+<section class="section section-dark" id="profile">
+
+<h2 class="section-title">
+Profile <span>Overview</span>
+</h2>
+
 <p class="section-subtitle">
-Combining software engineering, DevOps automation, hospitality technology, networking, and premium UI/UX experiences into one seamless ecosystem.
+An experienced IT Support, DevOps Engineer, and Full Stack Developer focused on premium hospitality technology, automation systems, infrastructure reliability, and elegant digital experiences.
 </p>
 
 <div class="grid">
+
 <div class="card">
-<i class="fa-solid fa-hotel"></i>
-<h3>Hotel PMS</h3>
+<i class="fa-solid fa-user"></i>
+<h3>Professional Profile</h3>
 <p>
-Developed modern Property Management Systems with reservation management, check-in/check-out workflow, housekeeping coordination, room monitoring, and operational dashboards.
+Experienced in DevOps practices, IT infrastructure, networking, automation systems, troubleshooting, and enterprise hospitality operations. Strong analytical mindset with attention to scalability, performance, and operational excellence.
 </p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-laptop-code"></i>
-<h3>Case Management</h3>
+<i class="fa-solid fa-code"></i>
+<h3>Technical Expertise</h3>
 <p>
-Built intelligent case management systems with live tracking, SLA monitoring, department workflow, escalation system, analytics, and reporting dashboards.
+Specialized in Full Stack Development, DevOps automation, CI/CD pipelines, infrastructure monitoring, networking systems, and modern hospitality technology solutions.
 </p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-comments"></i>
-<h3>Guest Comment</h3>
+<i class="fa-solid fa-lightbulb"></i>
+<h3>Creative Innovation</h3>
 <p>
-Designed guest feedback platforms for collecting, analyzing, and visualizing guest satisfaction data to improve hospitality service quality.
+Combining technology and creativity to deliver modern digital systems with premium UI/UX experiences, workflow optimization, and operational efficiency.
 </p>
 </div>
+
 </div>
 </section>
 
 <section class="section" id="experience">
-<h2 class="section-title">Professional <span>Experience</span></h2>
+
+<h2 class="section-title">
+Professional <span>Experience</span>
+</h2>
+
 <p class="section-subtitle">
 Years of experience delivering enterprise hospitality systems, infrastructure reliability, and operational excellence.
 </p>
 
 <div class="timeline">
+
 <div class="timeline-item">
 <h3>IT Officer</h3>
 <h5>Metland Venya Ubud • February 2025 - Present</h5>
@@ -437,67 +607,22 @@ Maintained IT assets, infrastructure reliability, operational systems, networkin
 Designed scalable software solutions, developed modern applications, optimized system performance, and collaborated with teams to build reliable digital platforms.
 </p>
 </div>
-</div>
-</section>
-
-<section class="section section-dark" id="education">
-<h2 class="section-title">Education <span>Journey</span></h2>
-<p class="section-subtitle">
-Academic background and educational journey focused on technology, software engineering, networking, and information systems.
-</p>
-
-<div class="grid">
-
-<div class="card">
-<i class="fa-solid fa-school"></i>
-<h3>SD N 5 Puhu</h3>
-<p>
-2001 - 2007
-</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-school"></i>
-<h3>SMP N 2 Payangan</h3>
-<p>
-2007 - 2010
-</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-school"></i>
-<h3>SMA N 1 Payangan</h3>
-<p>
-2010 - 2013
-</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-graduation-cap"></i>
-<h3>Bina Sarana Informatika Jakarta</h3>
-<p>
-2013 - 2016
-</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-user-graduate"></i>
-<h3>STMIK Nusa Mandiri Jakarta</h3>
-<p>
-2017 - 2018
-</p>
-</div>
 
 </div>
 </section>
 
 <section class="section section-dark" id="projects">
-<h2 class="section-title">Featured <span>Projects</span></h2>
+
+<h2 class="section-title">
+Featured <span>Projects</span>
+</h2>
+
 <p class="section-subtitle">
 Premium digital products and operational systems designed to improve efficiency, automation, and guest experience.
 </p>
 
 <div class="grid">
+
 <div class="card">
 <i class="fa-solid fa-building"></i>
 <h3>Property Management System</h3>
@@ -529,20 +654,130 @@ Built a guest comment and feedback platform to collect guest experiences, monito
 Created a digital guest card management system integrated with hotel operations for faster guest registration, QR verification, centralized guest data management, and enhanced customer experience.
 </p>
 </div>
+
 </div>
 </section>
 
-<footer class="footer" id="contact">
-<h3>I Wayan Divrayadnya</h3>
+<section class="section section-dark" id="education">
+
+<h2 class="section-title">
+Education <span>Journey</span>
+</h2>
+
+<p class="section-subtitle">
+Academic background and educational journey focused on technology, software engineering, networking, and information systems.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-school"></i>
+<h3>SD N 5 Puhu</h3>
+<p>2001 - 2007</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-school"></i>
+<h3>SMP N 2 Payangan</h3>
+<p>2007 - 2010</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-school"></i>
+<h3>SMA N 1 Payangan</h3>
+<p>2010 - 2013</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-graduation-cap"></i>
+<h3>Bina Sarana Informatika Jakarta</h3>
+<p>2013 - 2016</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user-graduate"></i>
+<h3>STMIK Nusa Mandiri Jakarta</h3>
+<p>2017 - 2018</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="contact">
+
+<h2 class="section-title">
+Get In <span>Touch</span>
+</h2>
+
+<p class="section-subtitle">
+Professional contact information, profile summary, and technical expertise.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-address-book"></i>
+
+<h3>Contact</h3>
+
+<p>
+📞 082112001450
+<br><br>
+
+✉️ divrayadnyaa@mail.com
+<br><br>
+
+🌐 https://divrayadnya.github.io/divrayadnya/
+<br><br>
+
+📍 Jalan Partha Wijaya NO: 13 Br.Melinggih Desa Melinggih Kec. Payangan Kab. Gianyar
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user"></i>
+
+<h3>Profile</h3>
+
+<p>
+An experienced IT Support professional with strong expertise in DevOps practices, ensuring seamless IT system operations and efficient technical assistance. Skilled in diagnosing and resolving diverse hardware and software issues with a communicative, user-friendly approach. Adept at implementing automation, monitoring, and CI/CD pipelines to enhance system reliability and performance.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-code"></i>
+
+<h3>Skill</h3>
+
+<p>
+1. Full Stack Development – Front-end and back-end application design, optimization, and scalability.
+<br><br>
+
+2. DevOps – Automation, monitoring, CI/CD pipelines, and operational excellence.
+<br><br>
+
+3. Networking – IP addressing, wireless networking, troubleshooting, and infrastructure reliability.
+</p>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+
+<h3>
+I Wayan Divrayadnya
+</h3>
+
 <p>
 M.Kom • DevOps Engineer • IT Officer • Full Stack Developer
 </p>
+
 <p>
 © 2026 All Rights Reserved.
 </p>
-</footer>
 
-</div>
+</footer>
 
 </body>
 </html>
