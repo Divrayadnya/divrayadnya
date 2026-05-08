@@ -1,221 +1,695 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Wayan Divrayadnya | DevOps & IT Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    body {
+      background: #050816;
+      color: white;
+      overflow-x: hidden;
+    }
 
-        <title>Divrayadnya</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Divrayadnya</a>
-                </div>
+    body::before {
+      content: "";
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,212,255,0.2) 0%, rgba(0,0,0,0) 70%);
+      top: -200px;
+      right: -150px;
+      z-index: -1;
+    }
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Experience</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+    body::after {
+      content: "";
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(140,82,255,0.15) 0%, rgba(0,0,0,0) 70%);
+      bottom: -200px;
+      left: -150px;
+      z-index: -1;
+    }
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+    .container {
+      width: 95%;
+      max-width: 1400px;
+      margin: auto;
+      padding: 40px 0;
+    }
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Divrayadnya</span> <br> As Softwere <br> <span class="home__title-color">Engineer</h1>
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-                    <a href="https://api.whatsapp.com/send/?phone=%2B6282112001450&text=Iam+Interested+with+your+skill%0A" class="button">Contact Personal</a>
-                </div>
+    .hero-left {
+      animation: fadeUp 1s ease;
+    }
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/i-wayan-divrayadnya-942603144" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/divrayadnya" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://www.facebook.com/divra.yadnya" class="home__social-icon"><i class='bx bxl-facebook' ></i></a>
-                </div>
+    .tag {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      border-radius: 100px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      backdrop-filter: blur(10px);
+      margin-bottom: 25px;
+      color: #00d4ff;
+    }
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href=""/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+    .hero h1 {
+      font-size: 70px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+    .hero h1 span {
+      background: linear-gradient(90deg, #00d4ff, #8c52ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-                <div class="about__container bd-grid">
-                    <div class="">
-                        <img src="" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am I Wayan Divrayadnya</h2>
-                        <p class="about__text"> Technology professional with hands-on experience in HTML, CSS, and JavaScript. Developed responsive websites, collaborated with design teams, and performed debugging to ensure optimal functionality and user experience. Eager to contribute to innovative web projects and grow within dynamic development team. Proven track record of providing effective technical support and troubleshooting. Excellent communication and problem-solving skills, ensuring users receive top-notch assistance. Adaptable and quick to learn new systems, always ready to tackle challenges with positive attitude. Consistently delivers user-focused solutions and fosters collaborative working environment. Experienced in providing comprehensive technical support, ensuring smooth IT operations and resolving issues promptly. Capable of troubleshooting wide range of hardware and software problems, with knack for clear communication and user-friendly solutions. Enthusiastic about leveraging technology to improve workflows and enhance productivity.</p>           
-                    </div>                                   
-                </div>
-            </section>
+    .hero p {
+      color: #cbd5e1;
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 35px;
+    }
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+    .buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text"> Here is a further explanation of some professional skills in the IT field.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name">Software installation</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+    .btn {
+      padding: 14px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      border: 1px solid transparent;
+    }
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name">Web Developer</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name">Network troubleshooting</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name">Wireless networking understanding</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">75%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name">Data backup and recovery</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name"> WordPress</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>              
-                        <img src="work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-             <!--===== Exprience =====-->
-             <section class="work section " id="work">
-                <h2 class="section-title">Experience</h2>
+    .btn-primary {
+      background: linear-gradient(135deg, #00d4ff, #8c52ff);
+      color: white;
+      box-shadow: 0 10px 30px rgba(0,212,255,0.3);
+    }
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src=Experience.jpg alt="">
-                    </div>
-                    <div>
-                        <h2 class="about__subtitle">Freelance Softwere Engineer At Upwork.com & Fiveer.com </h2>
-                        <p class="about__text">Freelance IT & Web Consultant</p><br>
-                        <h2 class="about__subtitle"> MASON ADVENTURES As EDP(IT Support)2019-2023</h2>
-                        <p class="about__text">Troubleshooting and resolving hardware and software issues, Installing, configuring, and maintaining computer systems and networks,Providing technical support to users both onsite and remotely,Monitoring system performance and performing preventive maintenance,Managing IT equipment inventory and technical documentation,Performing data backups and system recovery in case of failure ,Coordinating with vendors or external teams for system repairs and updates, Delivering basic training to users on device and system usage</p><br>
-                        <h2 class="about__subtitle"> TOKOPEDIA As Softwere Engineer 2016-2018</h2>
-                        <p class ="about__subtitle"> Design and Develop Software: Create, test, and deploy software solutions.Collaborate with Teams: Work with other engineers, product managers, and clients to understand requirements and deliver high-quality solutions.Maintain and Improve Systems: Regularly update and refine existing software to enhance performance and usability. Write Clean Code: Follow coding standards and best practices to ensure code quality and maintainability. Troubleshoot and Debug: Identify and resolve software issues promptly.Document Processes: Maintain comprehensive documentation for future reference and scalability.data-driven decisions for website improvements.</p><br>
-                        <h2 class="about__subtitle">PT PENTA SOFTWERE INDONESIA as FRONT END DEVELOPER 2014-2016 </h2>
-                        <p class="about__text">analysed user feedback and web analytics to make data-driven decisions for website improvements.</p><br>                     
-                        <h2 class="about__subtitle">KPK as DEPUTY FOR INFORMATION AND DATA 2013-2014 </h2>
-                        <p class="about__text">Formulating technical policies in the field of public reports and complaints services, information and data management, network work fostering between commissions and agencies, as well as anti-corruption detection and analysis .Conducting studies, reviews, and/or research in support of the tasks of the Deputy for Information and Data. Implementing public reports and complaints services.Planning, developing, and providing support for systems, information, and communication technology at the Corruption Eradication Commission .Fostering network work between commissions and agencies in the eradication of corruption. processing data and information, including analyzing information for the purpose of preventing and handling corruption crimes, managerial interests, as well as detecting indications of corruption crimes and corruption vulnerabilities and potential problems that cause corruption.Developing an early detection analysis center for indications of corruption crimes and corruption vulnerabilities as well as potential problems that cause corruption. Analyzing data and information to anticipate obstacles and resistance from corruption crime perpetrators.Managing national and international networks in the eradication of corruption. Implementing secretarial activities and resource fostering in the Deputy for Information and Data.Coordinating, synchronizing, monitoring, evaluating, and implementing working relationships between units in the Deputy for Information and Data. andPerforming other tasks within the scope of their duties as directed by the leadership.</p><br>          
-                    </div>                                   
-                </div>
-            </section>
-            
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
 
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="SEND" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(12px);
+    }
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <div class="footer__social">
-                <a href="https://www.facebook.com/divra.yadnya" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/mas_divra" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
 
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .glass-card {
+      width: 100%;
+      max-width: 450px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      border-radius: 35px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: rgba(0,212,255,0.15);
+      border-radius: 50%;
+      top: -80px;
+      right: -80px;
+    }
+
+    .profile-circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: auto;
+      background: linear-gradient(135deg, #00d4ff, #8c52ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .glass-card h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .glass-card h4 {
+      text-align: center;
+      color: #00d4ff;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding: 15px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .info-item i {
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #00d4ff, #8c52ff);
+    }
+
+    .section {
+      margin-top: 100px;
+    }
+
+    .section-title {
+      font-size: 45px;
+      margin-bottom: 15px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .section-title span {
+      color: #00d4ff;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #94a3b8;
+      max-width: 700px;
+      margin: auto auto 60px;
+      line-height: 1.8;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 28px;
+      padding: 35px;
+      transition: 0.4s ease;
+      backdrop-filter: blur(16px);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0,212,255,0.5);
+      box-shadow: 0 20px 40px rgba(0,212,255,0.1);
+    }
+
+    .skill-card i {
+      font-size: 35px;
+      margin-bottom: 20px;
+      color: #00d4ff;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .skill-card p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 50px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(#00d4ff, #8c52ff);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      width: 50%;
+      padding: 20px 40px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-content {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 30px;
+      border-radius: 28px;
+      backdrop-filter: blur(16px);
+      transition: 0.4s;
+    }
+
+    .timeline-content:hover {
+      transform: scale(1.03);
+    }
+
+    .timeline-content h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-content h5 {
+      color: #00d4ff;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .timeline-content p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #00d4ff;
+      border-radius: 50%;
+      top: 40px;
+      z-index: 10;
+      box-shadow: 0 0 20px #00d4ff;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -10px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .edu-card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 25px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: 0.4s;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .edu-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .edu-card p {
+      color: #94a3b8;
+    }
+
+    footer {
+      margin-top: 100px;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #94a3b8;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width: 991px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+        padding-right: 0;
+        text-align: left !important;
+      }
+
+      .timeline-item::before {
+        left: 10px !important;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .glass-card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="tag">
+          ✨ DEVOPS • IT SUPPORT • FULL STACK DEVELOPER
+        </div>
+
+        <h1>
+          I Wayan <span>Divrayadnya</span>
+        </h1>
+
+        <p>
+          Experienced IT Support and DevOps professional with strong expertise in networking, automation, infrastructure monitoring, and full stack development. Passionate about building scalable systems, improving operational efficiency, and delivering elegant digital experiences.
+        </p>
+
+        <div class="buttons">
+          <a href="mailto:divrayadnyaa@mail.com" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Contact Me
+          </a>
+
+          <a href="https://divrayadnya.github.io/divrayadnya/" target="_blank" class="btn btn-outline">
+            <i class="fa-solid fa-globe"></i> Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="glass-card">
+          <div class="profile-circle">
+            DW
+          </div>
+
+          <h2>I Wayan Divrayadnya</h2>
+          <h4>S.Kom | DevOps & IT Support</h4>
+
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Phone</strong>
+              <p>082112001450</p>
             </div>
-            <h2 class="footer__copy">&#169; Divrayadnya. All rigths reserved</h2>
-        </footer>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <p>divrayadnyaa@mail.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Address</strong>
+              <p>Payangan, Gianyar - Bali</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-language"></i>
+            <div>
+              <strong>Language</strong>
+              <p>English - Native</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <section class="section">
+      <h2 class="section-title">My <span>Expertise</span></h2>
+      <p class="section-subtitle">
+        Combining technical knowledge, system reliability, networking expertise, and modern development practices to deliver high-performance digital solutions.
+      </p>
 
-        <!--===== MAIN JS =====-->
-        <script src="main.js"></script>
-    </body>
+      <div class="grid-3">
+
+        <div class="skill-card">
+          <i class="fa-solid fa-hotel"></i>
+          <h3>Hotel PMS System</h3>
+          <p>
+            Developed a Property Management System (PMS) for hotel operations including reservation management, room monitoring, guest handling, housekeeping coordination, reporting dashboard, and operational workflow automation.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Full Stack Development</h3>
+          <p>
+            Experienced in designing and developing responsive front-end and scalable back-end applications with focus on performance, security, and maintainability.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-server"></i>
+          <h3>DevOps Engineer</h3>
+          <p>
+            Skilled in CI/CD pipelines, automation systems, infrastructure monitoring, deployment optimization, and operational excellence.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-network-wired"></i>
+          <h3>Networking</h3>
+          <p>
+            Strong understanding of IP addressing, wireless networking, troubleshooting, infrastructure reliability, and network maintenance.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section">
+      <h2 class="section-title">Work <span>Experience</span></h2>
+      <p class="section-subtitle">
+        Professional journey in IT infrastructure, support systems, software engineering, and digital transformation.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>IT Officer</h3>
+            <h5>Metland Venya Ubud • 2025 - Present</h5>
+            <p>
+              Developed management and monitoring systems for devices and networks. Managed infrastructure stability, troubleshooting, WordPress websites, operating systems, and technical documentation for internal IT operations.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>EDP / IT Support</h3>
+            <h5>Mason Adventures • 2019 - 2024</h5>
+            <p>
+              Maintained IT asset inventory, ensured audit compliance, supported operational systems, and provided infrastructure maintenance across departments.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Software Engineer</h3>
+            <h5>Tokopedia • 2015 - 2018</h5>
+            <p>
+              Designed, developed, tested, and maintained software systems while solving technical problems and improving software reliability and performance.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section">
+      <h2 class="section-title">Education <span>Background</span></h2>
+      <p class="section-subtitle">
+        Academic journey focused on technology, information systems, and software engineering.
+      </p>
+
+      <div class="education-grid">
+
+        <div class="edu-card">
+          <h3>SD N 5 Puhu</h3>
+          <p>2001 - 2007</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>SMP N 2 Payangan</h3>
+          <p>2007 - 2010</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>SMA N 1 Payangan</h3>
+          <p>2010 - 2013</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>Bina Sarana Informatika Jakarta</h3>
+          <p>2013 - 2016</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>STMIK Nusa Mandiri Jakarta</h3>
+          <p>2017 - 2018</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section">
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="section-subtitle">
+        Several systems and digital solutions that I have developed to improve operational efficiency, guest experience, and business workflow automation.
+      </p>
+
+      <div class="grid-3">
+
+        <div class="skill-card">
+          <i class="fa-solid fa-hotel"></i>
+          <h3>Property Management System \(PMS\)</h3>
+          <p>
+            Successfully developed a modern hotel Property Management System (PMS) featuring reservation management, room status monitoring, check-in & check-out process, housekeeping coordination, reporting dashboard, and integrated operational workflow automation.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Case Management System</h3>
+          <p>
+            Developed an intelligent hotel case management system for handling operational issues, tracking response time, monitoring case status, department coordination, and improving workflow efficiency in real-time.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Guest Comment System</h3>
+          <p>
+            Built a guest comment and feedback platform to collect guest experiences, monitor satisfaction levels, generate reports, and support hospitality service quality improvement.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-id-card"></i>
+          <h3>Digital Guest Card</h3>
+          <p>
+            Created a digital guest card management system integrated with hotel operations for faster guest registration, data management, and enhanced customer service experience.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer>
+      <h3 style="margin-bottom:10px; color:white;">I Wayan Divrayadnya</h3>
+      <p>Elegant Digital Portfolio • DevOps • IT Support • Full Stack Developer</p>
+      <p style="margin-top:15px; font-size:13px;">
+        © 2026 All Rights Reserved.
+      </p>
+    </footer>
+
+  </div>
+
+</body>
 </html>
-
-
-
-
